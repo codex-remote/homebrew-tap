@@ -29,9 +29,10 @@ brew install codex-remote
 brew upgrade codex-remote
 ```
 
-`brew install codex-remote` on a completely clean Mac requires eventual
-acceptance into an official Homebrew repository. A third-party Tap cannot claim
-that global short name before Homebrew knows which owner repository to use.
+`brew install codex-remote` on a completely clean Mac is a later official
+Homebrew Cask milestone. The Runtime is closed-source, so it is not eligible for
+the open-source Formula requirements of `homebrew/core`. A third-party Tap
+cannot claim that global short name before Homebrew knows an official Cask.
 
 This Tap contains only installation metadata. Runtime binaries and immutable
 release manifests are published in the separate `codex-remote/releases`
