@@ -9,6 +9,10 @@ Developer ID 签名和 Apple 公证。
 
 ## 尚未发布
 
+`0.2.0-beta.2` 之后暂时没有新的用户可见变更。
+
+## [0.2.0-beta.2] - 2026-08-24
+
 ### 修复
 
 - 对 Valkey 配置中的默认 macOS 状态路径和密码进行引用与转义，避免
@@ -33,6 +37,8 @@ Developer ID 签名和 Apple 公证。
 
 ### 当前限制
 
+- 已由 `0.2.0-beta.2` 取代：使用默认 macOS `Application Support` 状态路径时，
+  Setup 无法启动 Valkey。
 - 此 Beta 为闭源、未签名且未经过 Apple 公证，许可见
   [BETA-LICENSE](BETA-LICENSE)。
 - 仅支持 Apple Silicon Mac。
@@ -43,3 +49,4 @@ Developer ID 签名和 Apple 公证。
 兼容 Manifest 和发布说明。
 
 [0.2.0-beta.1]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.1
+[0.2.0-beta.2]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.2

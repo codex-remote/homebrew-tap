@@ -1,9 +1,9 @@
 class CodexRemote < Formula
   desc "Use a phone to control local Codex sessions over your LAN"
   homepage "https://github.com/codex-remote"
-  url "https://github.com/codex-remote/homebrew-tap/releases/download/v0.2.0-beta.1/codex-remote-runtime-0.2.0-beta.1-darwin-arm64.tar.gz"
-  version "0.2.0-beta.1"
-  sha256 "3838452a07c0f785c3f2d193561276d6ff3010f724afc41aafc91ce1ba4ffc4a"
+  url "https://github.com/codex-remote/homebrew-tap/releases/download/v0.2.0-beta.2/codex-remote-runtime-0.2.0-beta.2-darwin-arm64.tar.gz"
+  version "0.2.0-beta.2"
+  sha256 "1a7a51fb93decc3e112cc27d93171f9a7a0f8207fe32b82b6ff7d3212bbde807"
   license :cannot_represent
 
   depends_on arch: :arm64

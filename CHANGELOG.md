@@ -10,6 +10,10 @@ notarization.
 
 ## Unreleased
 
+No user-visible changes have been recorded after `0.2.0-beta.2`.
+
+## [0.2.0-beta.2] - 2026-08-24
+
 ### Fixed
 
 - Quote and escape the default macOS state path and password in Valkey
@@ -37,6 +41,8 @@ candidate.
 
 ### Known limitations
 
+- Superseded by `0.2.0-beta.2`: Setup fails to start Valkey with the default
+  macOS `Application Support` state path.
 - This Beta is proprietary, unsigned, and not Apple notarized. See
   [BETA-LICENSE](BETA-LICENSE).
 - Only Apple Silicon Macs are supported.
@@ -49,3 +55,4 @@ Each public version has an immutable Git tag and GitHub Release containing its
 archive, checksum, compatibility manifest, and release notes.
 
 [0.2.0-beta.1]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.1
+[0.2.0-beta.2]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.2

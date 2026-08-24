@@ -39,7 +39,7 @@ Mac 屏幕，也不会控制鼠标和键盘。
 并登录 Codex，并且 Mac 与手机连接在同一局域网。
 
 > [!IMPORTANT]
-> Runtime `0.2.0-beta.1` 是面向测试的公开 Beta，未签名且未经过 Apple 公证。未来
+> Runtime `0.2.0-beta.2` 是面向测试的公开 Beta，未签名且未经过 Apple 公证。未来
 > 稳定版仍要求 Developer ID 签名和 Apple 公证。
 
 ### 1. 安装

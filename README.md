@@ -43,7 +43,7 @@ Before starting, make sure Codex is installed and signed in on the Mac, and that
 the Mac and phone are connected to the same local network.
 
 > [!IMPORTANT]
-> Runtime `0.2.0-beta.1` is an unsigned, unnotarized public Beta intended for
+> Runtime `0.2.0-beta.2` is an unsigned, unnotarized public Beta intended for
 > testing. Stable releases will require Developer ID signing and Apple
 > notarization.
 
