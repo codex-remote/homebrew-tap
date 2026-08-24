@@ -9,7 +9,12 @@ Developer ID 签名和 Apple 公证。
 
 ## 尚未发布
 
-`0.2.0-beta.2` 之后暂时没有新的用户可见变更。
+### 变更
+
+- 将五个独立登录项收敛为一个 `com.codex-remote.runtime` LaunchAgent，由
+  Supervisor 管理全部 Runtime 进程，同时保留各服务独立日志。
+- 升级修复会先卸载五个精确的旧 LaunchAgent Label 并删除对应 plist，再启动
+  Supervisor。
 
 ## [0.2.0-beta.2] - 2026-08-24
 

@@ -10,7 +10,13 @@ notarization.
 
 ## Unreleased
 
-No user-visible changes have been recorded after `0.2.0-beta.2`.
+### Changed
+
+- Replace five separate Login Items with one `com.codex-remote.runtime`
+  LaunchAgent whose Supervisor manages all Runtime processes and preserves
+  separate service logs.
+- Upgrade repair removes the exact five legacy LaunchAgent labels and plist
+  files before starting the Supervisor.
 
 ## [0.2.0-beta.2] - 2026-08-24
 
