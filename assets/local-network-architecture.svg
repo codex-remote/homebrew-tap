@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title description">
+  <title id="title">Codex Remote local network architecture</title>
+  <desc id="description">An iPhone running Safari connects over local Wi-Fi to Codex Remote and Codex on a Mac. Project files stay on the Mac.</desc>
+  <defs>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#218765"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#426c9c"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="760" fill="#f6f6f2"/>
+  <text x="800" y="74" text-anchor="middle" fill="#1e211f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="38" font-weight="700">Your phone and Mac connect on the local network</text>
+  <text x="800" y="116" text-anchor="middle" fill="#656963" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21">Codex Remote sends tasks, live status, and results without streaming the Mac screen</text>
+
+  <rect x="86" y="158" width="1428" height="482" rx="20" fill="#ffffff" stroke="#9bc4b7" stroke-width="3" stroke-dasharray="12 10"/>
+  <rect x="116" y="139" width="218" height="40" rx="8" fill="#218765"/>
+  <text x="225" y="166" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="700">LOCAL NETWORK</text>
+
+  <g transform="translate(170 224)">
+    <rect x="0" y="0" width="204" height="342" rx="32" fill="#1e211f"/>
+    <rect x="12" y="14" width="180" height="314" rx="23" fill="#f8f9f7"/>
+    <rect x="70" y="24" width="64" height="8" rx="4" fill="#1e211f"/>
+    <circle cx="102" cy="92" r="31" fill="#e3f0ec"/>
+    <path d="M87 95c10-13 20-13 30 0M93 101c6-7 12-7 18 0" fill="none" stroke="#218765" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="102" cy="108" r="3.5" fill="#218765"/>
+    <text x="102" y="152" text-anchor="middle" fill="#1e211f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" font-weight="700">Codex Remote</text>
+    <rect x="35" y="180" width="134" height="42" rx="8" fill="#ffffff" stroke="#d8ddd9" stroke-width="2"/>
+    <text x="102" y="207" text-anchor="middle" fill="#343936" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17">Projects</text>
+    <rect x="35" y="234" width="134" height="42" rx="8" fill="#ffffff" stroke="#d8ddd9" stroke-width="2"/>
+    <text x="102" y="261" text-anchor="middle" fill="#343936" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17">Tasks + results</text>
+  </g>
+  <text x="272" y="601" text-anchor="middle" fill="#1e211f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700">iPhone Safari</text>
+
+  <g transform="translate(518 300)">
+    <circle cx="110" cy="94" r="84" fill="#eef5f2" stroke="#b8d2c9" stroke-width="2"/>
+    <path d="M63 88c31-34 63-34 94 0M79 104c20-22 41-22 62 0M98 122c8-8 16-8 24 0" fill="none" stroke="#218765" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="110" cy="139" r="6" fill="#218765"/>
+    <text x="110" y="207" text-anchor="middle" fill="#4d534f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="19" font-weight="600">Local Wi-Fi</text>
+  </g>
+
+  <line x1="390" y1="380" x2="510" y2="380" stroke="#218765" stroke-width="5" marker-end="url(#arrow-green)"/>
+  <line x1="508" y1="444" x2="388" y2="444" stroke="#426c9c" stroke-width="5" marker-end="url(#arrow-blue)"/>
+  <text x="449" y="359" text-anchor="middle" fill="#218765" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="600">Tasks</text>
+  <text x="449" y="476" text-anchor="middle" fill="#426c9c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="600">Status + results</text>
+
+  <line x1="722" y1="380" x2="844" y2="380" stroke="#218765" stroke-width="5" marker-end="url(#arrow-green)"/>
+  <line x1="842" y1="444" x2="720" y2="444" stroke="#426c9c" stroke-width="5" marker-end="url(#arrow-blue)"/>
+
+  <g transform="translate(866 222)">
+    <rect x="0" y="0" width="532" height="318" rx="12" fill="#242825"/>
+    <rect x="14" y="14" width="504" height="274" rx="6" fill="#f7f8f6"/>
+    <circle cx="37" cy="35" r="6" fill="#df765f"/>
+    <circle cx="57" cy="35" r="6" fill="#e0ad4f"/>
+    <circle cx="77" cy="35" r="6" fill="#5ca47f"/>
+
+    <rect x="45" y="70" width="414" height="58" rx="8" fill="#e4f0ec"/>
+    <circle cx="78" cy="99" r="16" fill="#218765"/>
+    <text x="78" y="105" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="700">C</text>
+    <text x="110" y="106" fill="#1e211f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" font-weight="700">Codex Remote</text>
+
+    <rect x="45" y="143" width="198" height="104" rx="8" fill="#ffffff" stroke="#d8ddd9" stroke-width="2"/>
+    <text x="144" y="181" text-anchor="middle" fill="#426c9c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="700">Codex</text>
+    <text x="144" y="213" text-anchor="middle" fill="#656963" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15">Runs the task</text>
+
+    <rect x="261" y="143" width="198" height="104" rx="8" fill="#ffffff" stroke="#d8ddd9" stroke-width="2"/>
+    <text x="360" y="181" text-anchor="middle" fill="#b76545" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="700">Your projects</text>
+    <text x="360" y="213" text-anchor="middle" fill="#656963" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15">Stay on this Mac</text>
+
+    <path d="M194 318h144l30 34H164z" fill="#cbd0cc"/>
+    <rect x="136" y="352" width="260" height="14" rx="7" fill="#aeb5b0"/>
+  </g>
+  <text x="1132" y="601" text-anchor="middle" fill="#1e211f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700">Your Mac</text>
+
+  <g transform="translate(238 680)">
+    <circle cx="0" cy="0" r="6" fill="#218765"/>
+    <text x="18" y="7" fill="#4f5551" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="19">Codex Remote traffic stays on your LAN</text>
+    <circle cx="484" cy="0" r="6" fill="#426c9c"/>
+    <text x="502" y="7" fill="#4f5551" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="19">No screen streaming</text>
+    <circle cx="826" cy="0" r="6" fill="#b76545"/>
+    <text x="844" y="7" fill="#4f5551" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="19">Project files remain on the Mac</text>
+  </g>
+</svg>

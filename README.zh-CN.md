@@ -17,6 +17,22 @@ Mac 屏幕，也不会控制鼠标和键盘。
 - 实时查看任务状态并接收结果。
 - 让项目文件和 Codex 执行过程始终留在 Mac 上。
 
+## 局域网连接
+
+![Codex Remote 通过局域网连接 iPhone 和 Mac](assets/local-network-architecture.svg)
+
+手机通过本地 Wi-Fi 直接连接 Mac 上的 Codex Remote。它不会传输整个 Mac 屏幕，
+项目文件也始终保留在 Mac 上。
+
+## 产品界面
+
+<p align="center">
+  <img src="assets/mobile-projects.png" alt="iPhone 上的 Codex Remote 项目与会话导航" width="360">
+  <img src="assets/mobile-conversation.png" alt="在 iPhone 上查看已经完成的 Codex 任务" width="360">
+</p>
+
+截图使用通用示例项目和任务，不包含任何个人工作区或真实会话数据。
+
 ## 快速开始
 
 首个公开版本将支持 Apple Silicon Mac 和 iPhone Safari。开始前，请确认 Mac 已安装

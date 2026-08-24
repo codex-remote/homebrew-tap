@@ -19,6 +19,23 @@ mouse and keyboard.
 - Follow live task status and read results as they arrive.
 - Keep project files and Codex execution on the Mac.
 
+## Local network connection
+
+![Codex Remote connects an iPhone and Mac over the local network](assets/local-network-architecture.svg)
+
+The phone talks directly to Codex Remote on your Mac over local Wi-Fi. Codex
+Remote does not stream the Mac screen, and your project files remain on the Mac.
+
+## Product preview
+
+<p align="center">
+  <img src="assets/mobile-projects.png" alt="Codex Remote project and session navigation on an iPhone" width="360">
+  <img src="assets/mobile-conversation.png" alt="A completed Codex task viewed from an iPhone" width="360">
+</p>
+
+The screenshots use generic sample projects and tasks. No personal workspace or
+session data is included.
+
 ## Quick start
 
 The first public release will support Apple Silicon Macs and iPhone Safari.
