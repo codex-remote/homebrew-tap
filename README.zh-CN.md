@@ -1,6 +1,6 @@
 # Codex Remote
 
-[English](README.md)
+[English](README.md) | [版本记录](CHANGELOG.zh-CN.md)
 
 在手机上继续使用运行于 Mac 的 Codex。
 

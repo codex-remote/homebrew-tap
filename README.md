@@ -1,6 +1,6 @@
 # Codex Remote
 
-[简体中文](README.zh-CN.md)
+[简体中文](README.zh-CN.md) | [Changelog](CHANGELOG.md)
 
 Use your phone to continue working with Codex running on your Mac.
 
