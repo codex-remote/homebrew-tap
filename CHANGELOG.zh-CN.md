@@ -9,7 +9,11 @@ Developer ID 签名和 Apple 公证。
 
 ## 尚未发布
 
-首个公开 Beta 之后暂时没有新的用户可见变更。
+### 修复
+
+- 对 Valkey 配置中的默认 macOS 状态路径和密码进行引用与转义，避免
+  `Application Support` 中的空格导致启动失败。
+- 服务就绪检查失败时，只回滚本次 Setup 新加载的 LaunchAgent。
 
 ## [0.2.0-beta.1] - 2026-08-24
 

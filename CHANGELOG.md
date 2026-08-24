@@ -10,7 +10,12 @@ notarization.
 
 ## Unreleased
 
-No user-visible changes have been recorded after the first public Beta.
+### Fixed
+
+- Quote and escape the default macOS state path and password in Valkey
+  configuration so `Application Support` no longer prevents startup.
+- Roll back only the LaunchAgents started by the current Setup attempt when a
+  service fails its readiness check.
 
 ## [0.2.0-beta.1] - 2026-08-24
 
