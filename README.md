@@ -2,84 +2,80 @@
 
 [简体中文](README.zh-CN.md)
 
-Codex Remote turns your phone into a remote workbench for Codex while your
-Mac remains the execution machine. Start a task at your Mac, leave your desk,
-then use Safari on your phone to inspect projects and sessions, submit follow-up
-tasks, and receive status and results over your local network.
+Use your phone to continue working with Codex running on your Mac.
 
-It solves a practical problem: long Codex tasks should not require you to stay
-in front of the Mac that is running them.
+Codex Remote is designed for tasks that take longer than you want to spend at
+your desk. Start work on the Mac, then use your phone to check progress, send a
+follow-up, or review the result from elsewhere on the same local network.
 
-Codex Remote is not a remote desktop. It does not stream your display or take
-over the mouse and keyboard. It exchanges structured projects, sessions, tasks,
-states, and results with the Codex runtime on your Mac.
+It is not a remote desktop. Your phone works with Codex projects, sessions,
+tasks, status, and results without streaming the Mac screen or controlling its
+mouse and keyboard.
 
-## How it works
+## What you can do
 
-```text
-Phone Safari -> local Gateway -> Run Server -> Mac Agent -> Codex App Server
-```
+- Browse the projects and Codex sessions available on your Mac.
+- Start a task or continue an existing conversation from your phone.
+- Follow live task status and read results as they arrive.
+- Keep project files and Codex execution on the Mac.
 
-Your projects and Codex execution remain on the Mac. The phone connects to a
-local Gateway, and the Runtime coordinates authenticated requests, live status,
-and results. The first release supports Apple Silicon Macs only.
+## Quick start
 
-## Release status
+The first public release will support Apple Silicon Macs and iPhone Safari.
+Before starting, make sure Codex is installed and signed in on the Mac, and that
+the Mac and phone are connected to the same local network.
 
-Runtime `0.2.0` has passed local installation and real-device acceptance. It is
-not publicly released yet. The commands below will work only after the Runtime
-has completed binary licensing, Developer ID signing, Apple notarization,
-immutable tagging and asset publication, and clean-Mac acceptance.
+> [!IMPORTANT]
+> Runtime `0.2.0` has passed local and real-device acceptance but is not publicly
+> downloadable yet. The commands below are the intended installation flow and
+> will work after the first signed and notarized release is published.
 
-After publication, installation from this third-party Tap will be:
+### 1. Install
 
 ```bash
 brew trust --formula codex-remote/tap/codex-remote
 brew install codex-remote/tap/codex-remote
+```
+
+### 2. Set up your Mac
+
+Choose the directory that contains the projects you want to access:
+
+```bash
 codex-remote setup --workspace-root ~/work
+```
+
+Setup finds Codex, prepares Codex Remote's private local data, selects available
+ports, and starts its background services. It does not change or stop an
+existing PostgreSQL, Redis, or Valkey installation.
+
+### 3. Pair your phone
+
+```bash
 codex-remote pair
 ```
 
-Homebrew 6 requires explicit trust for third-party Formulae. Homebrew owns this
-trust step; a Formula cannot perform it on the user's behalf.
+Open the displayed link or scan the QR code with your iPhone. After pairing,
+choose a project and session, then send a task just as you would from the Mac.
 
-## Install and setup have different jobs
+## Everyday use
 
-`brew install` installs immutable Runtime files and the Homebrew-managed
-`postgresql@17` dependency. It does not initialize a database, generate secrets,
-select ports, scan workspaces, register background services, or start Codex
-Remote.
+Codex continues running on the Mac. You can lock the Mac screen or move away
+from your desk while using the phone to follow the task. The Mac must remain
+powered on, connected to the network, and able to run Codex.
 
-`codex-remote setup` performs per-user configuration. It finds and validates
-Codex, creates isolated PostgreSQL and bundled Valkey state under
-`~/Library/Application Support/CodexRemote`, selects and saves available ports,
-runs migrations, stores secrets in Keychain, registers services, and verifies
-their health. Existing PostgreSQL, Redis, and Valkey installations are not
-modified, stopped, unlinked, or reused.
+Run `codex-remote pair` again whenever you need to connect another phone or
+restore access. Updates will use the normal Homebrew workflow:
 
-`codex-remote pair` then displays the local URL and QR code used by the phone.
+```bash
+brew upgrade codex-remote
+```
 
-## What the Tap path means
+## Privacy and availability
 
-The fully qualified Formula name is `codex-remote/tap/codex-remote`:
+Project files and Codex execution stay on your Mac. Codex Remote sends only the
+project, session, task, status, and result data needed by the paired phone over
+the local network.
 
-- `codex-remote` is the GitHub organization.
-- `tap` maps to the repository named `homebrew-tap` by Homebrew convention.
-- `codex-remote` is `Formula/codex-remote.rb` in this repository.
-
-After the Tap is registered, Homebrew can use the short Formula name for later
-upgrade and reinstall operations. A bare `brew install codex-remote` on a clean
-Mac is a separate, later milestone that requires acceptance into the official
-Homebrew Cask repository.
-
-## Public distribution boundary
-
-This repository is the only public Codex Remote distribution repository. It
-contains Homebrew Formula metadata and, when a version is released, the signed
-and notarized Runtime assets attached to that version's GitHub Release.
-
-Implementation source and internal product, architecture, protocol, and release
-documentation remain private. Published assets contain only the application
-Runtime, required license notices, checksums, manifests, and user-facing
-installation information. Never commit credentials, private source, internal
-documentation, or a local `file://` archive URL here.
+The application is distributed from this public repository as signed binaries.
+Its implementation source and internal documentation are currently private.
