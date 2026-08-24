@@ -9,6 +9,10 @@ Developer ID 签名和 Apple 公证。
 
 ## 尚未发布
 
+`0.2.0-beta.3` 之后暂时没有新的用户可见变更。
+
+## [0.2.0-beta.3] - 2026-08-24
+
 ### 变更
 
 - 将五个独立登录项收敛为一个 `com.codex-remote.runtime` LaunchAgent，由
@@ -55,3 +59,4 @@ Developer ID 签名和 Apple 公证。
 
 [0.2.0-beta.1]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.1
 [0.2.0-beta.2]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.2
+[0.2.0-beta.3]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.3

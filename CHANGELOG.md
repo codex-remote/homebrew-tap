@@ -10,6 +10,10 @@ notarization.
 
 ## Unreleased
 
+No user-visible changes have been recorded after `0.2.0-beta.3`.
+
+## [0.2.0-beta.3] - 2026-08-24
+
 ### Changed
 
 - Replace five separate Login Items with one `com.codex-remote.runtime`
@@ -62,3 +66,4 @@ archive, checksum, compatibility manifest, and release notes.
 
 [0.2.0-beta.1]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.1
 [0.2.0-beta.2]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.2
+[0.2.0-beta.3]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.3

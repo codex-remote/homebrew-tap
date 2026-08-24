@@ -43,7 +43,7 @@ Before starting, make sure Codex is installed and signed in on the Mac, and that
 the Mac and phone are connected to the same local network.
 
 > [!IMPORTANT]
-> Runtime `0.2.0-beta.2` is an unsigned, unnotarized public Beta intended for
+> Runtime `0.2.0-beta.3` is an unsigned, unnotarized public Beta intended for
 > testing. Stable releases will require Developer ID signing and Apple
 > notarization.
 
@@ -80,6 +80,9 @@ choose a project and session, then send a task just as you would from the Mac.
 Codex continues running on the Mac. You can lock the Mac screen or move away
 from your desk while using the phone to follow the task. The Mac must remain
 powered on, connected to the network, and able to run Codex.
+
+Codex Remote registers one `com.codex-remote.runtime` Login Item. Its Supervisor
+manages the database, event store, Codex agent, Run Server, and phone Gateway.
 
 Run `codex-remote pair` again whenever you need to connect another phone or
 restore access. Updates will use the normal Homebrew workflow:

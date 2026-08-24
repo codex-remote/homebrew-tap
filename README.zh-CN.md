@@ -39,7 +39,7 @@ Mac 屏幕，也不会控制鼠标和键盘。
 并登录 Codex，并且 Mac 与手机连接在同一局域网。
 
 > [!IMPORTANT]
-> Runtime `0.2.0-beta.2` 是面向测试的公开 Beta，未签名且未经过 Apple 公证。未来
+> Runtime `0.2.0-beta.3` 是面向测试的公开 Beta，未签名且未经过 Apple 公证。未来
 > 稳定版仍要求 Developer ID 签名和 Apple 公证。
 
 ### 1. 安装
@@ -73,6 +73,9 @@ Mac 上一样发送任务。
 
 Codex 始终在 Mac 上执行。你可以锁定 Mac 屏幕或离开电脑，再通过手机跟进任务。
 Mac 需要保持开机、连接网络，并且能够正常运行 Codex。
+
+Codex Remote 只注册一个 `com.codex-remote.runtime` 登录项，由 Supervisor 管理数据库、
+事件存储、Codex Agent、Run Server 和手机 Gateway。
 
 需要连接另一台手机或恢复访问时，重新运行 `codex-remote pair`。后续升级使用普通的
 Homebrew 命令：
