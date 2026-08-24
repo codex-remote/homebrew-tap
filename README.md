@@ -38,14 +38,15 @@ session data is included.
 
 ## Quick start
 
-The first public release will support Apple Silicon Macs and iPhone Safari.
+The first public Beta will support Apple Silicon Macs and iPhone Safari.
 Before starting, make sure Codex is installed and signed in on the Mac, and that
 the Mac and phone are connected to the same local network.
 
 > [!IMPORTANT]
-> Runtime `0.2.0` has passed local and real-device acceptance but is not publicly
-> downloadable yet. The commands below are the intended installation flow and
-> will work after the first signed and notarized release is published.
+> Runtime `0.2.0-beta.1` is being prepared as an unsigned, unnotarized public
+> Beta. The commands below will work after its GitHub prerelease asset is
+> published. Stable releases will require Developer ID signing and Apple
+> notarization.
 
 ### 1. Install
 
@@ -94,5 +95,7 @@ Project files and Codex execution stay on your Mac. Codex Remote sends only the
 project, session, task, status, and result data needed by the paired phone over
 the local network.
 
-The application is distributed from this public repository as signed binaries.
-Its implementation source and internal documentation are currently private.
+The application is distributed from this public repository as proprietary
+binaries under the [Public Beta Binary License](BETA-LICENSE). Beta binaries
+are not Developer ID signed or Apple notarized. Implementation source and
+internal documentation are currently private.

@@ -35,12 +35,13 @@ Mac 屏幕，也不会控制鼠标和键盘。
 
 ## 快速开始
 
-首个公开版本将支持 Apple Silicon Mac 和 iPhone Safari。开始前，请确认 Mac 已安装
+首个公开 Beta 将支持 Apple Silicon Mac 和 iPhone Safari。开始前，请确认 Mac 已安装
 并登录 Codex，并且 Mac 与手机连接在同一局域网。
 
 > [!IMPORTANT]
-> Runtime `0.2.0` 已通过本地和真机验收，但目前还不能公开下载。下面是正式版本的
-> 预定安装流程，需要等首个完成签名和 Apple 公证的版本发布后才能使用。
+> Runtime `0.2.0-beta.1` 正在准备为未签名、未经过 Apple 公证的公开 Beta。GitHub
+> prerelease 资产上传后，下面的命令才可使用。未来稳定版仍要求 Developer ID 签名
+> 和 Apple 公证。
 
 ### 1. 安装
 
@@ -86,4 +87,6 @@ brew upgrade codex-remote
 项目文件和 Codex 执行过程保留在 Mac 上。Codex Remote 只在局域网内向已配对手机
 传递使用所需的项目、会话、任务、状态和结果数据。
 
-应用以签名二进制的形式通过这个公开仓库发布，具体实现源码和内部文档目前暂不公开。
+应用以闭源二进制形式通过这个公开仓库发布，并遵循
+[公开 Beta 二进制许可](BETA-LICENSE)。Beta 未经过 Developer ID 签名和 Apple 公证；
+具体实现源码和内部文档目前暂不公开。

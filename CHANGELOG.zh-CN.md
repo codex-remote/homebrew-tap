@@ -4,14 +4,15 @@
 
 本文档记录 Codex Remote Runtime 面向用户的变化。项目采用
 [语义化版本](https://semver.org/lang/zh-CN/)。只有当不可变 Git Tag、完成签名和
-Apple 公证的 Runtime 资产以及 GitHub Release 均已公开时，该版本才算正式发布。
+Runtime 资产和 GitHub Release 均已公开时，该版本才算对外发布。稳定版另外要求
+Developer ID 签名和 Apple 公证。
 
 ## 尚未发布
 
-### 计划版本：0.2.0
+### 计划版本：0.2.0-beta.1
 
-Runtime `0.2.0` 已通过本地安装和真机验收，但仍然是发布候选，目前还不能从这个
-仓库安装。
+Runtime `0.2.0-beta.1` 基于已经完成本地安装和真机验收的 `0.2.0` 候选版本准备。
+GitHub prerelease 资产公开前还不能安装。
 
 ### 新增
 
@@ -27,7 +28,9 @@ Runtime `0.2.0` 已通过本地安装和真机验收，但仍然是发布候选�
 
 ### 当前限制
 
-- 公开 Runtime 压缩包尚未完成许可证、签名、公证和上传。
+- 公开 Runtime 压缩包尚未上传。
+- 此 Beta 为闭源、未签名且未经过 Apple 公证，许可见
+  [BETA-LICENSE](BETA-LICENSE)。
 - 仅支持 Apple Silicon Mac。
 - 手机只能在同一局域网内访问，尚不支持公网访问和 TLS。
 - 每台已配对设备使用一个 Safari 标签；多个标签同时刷新可能被重放保护撤销会话。

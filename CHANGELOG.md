@@ -4,15 +4,16 @@
 
 This file records user-visible changes to the Codex Remote Runtime. The project
 uses [Semantic Versioning](https://semver.org/). A version is considered
-released only when its immutable Git tag, signed and notarized Runtime assets,
-and GitHub Release are public.
+published only when its immutable Git tag, Runtime assets, and GitHub Release
+are public. Stable versions additionally require Developer ID signing and Apple
+notarization.
 
 ## Unreleased
 
-### Planned version: 0.2.0
+### Planned version: 0.2.0-beta.1
 
-Runtime `0.2.0` has passed local installation and real-device acceptance. It is
-still a release candidate and cannot be installed from this repository yet.
+Runtime `0.2.0-beta.1` is being prepared from the locally accepted `0.2.0`
+candidate. It cannot be installed until the GitHub prerelease asset is public.
 
 ### Added
 
@@ -29,7 +30,9 @@ still a release candidate and cannot be installed from this repository yet.
 
 ### Known limitations
 
-- The public Runtime archive is not yet licensed, signed, notarized, or uploaded.
+- The public Runtime archive is not yet uploaded.
+- This Beta is proprietary, unsigned, and not Apple notarized. See
+  [BETA-LICENSE](BETA-LICENSE).
 - Only Apple Silicon Macs are supported.
 - Phone access is limited to the same local network; public internet access and
   TLS are not available yet.
