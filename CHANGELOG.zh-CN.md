@@ -9,10 +9,11 @@ Developer ID 签名和 Apple 公证。
 
 ## 尚未发布
 
-### 计划版本：0.2.0-beta.1
+首个公开 Beta 之后暂时没有新的用户可见变更。
 
-Runtime `0.2.0-beta.1` 基于已经完成本地安装和真机验收的 `0.2.0` 候选版本准备。
-GitHub prerelease 资产公开前还不能安装。
+## [0.2.0-beta.1] - 2026-08-24
+
+首个 Apple Silicon 公开 Beta，基于已经完成本地安装和真机验收的 `0.2.0` 候选版本。
 
 ### 新增
 
@@ -28,14 +29,13 @@ GitHub prerelease 资产公开前还不能安装。
 
 ### 当前限制
 
-- 公开 Runtime 压缩包尚未上传。
 - 此 Beta 为闭源、未签名且未经过 Apple 公证，许可见
   [BETA-LICENSE](BETA-LICENSE)。
 - 仅支持 Apple Silicon Mac。
 - 手机只能在同一局域网内访问，尚不支持公网访问和 TLS。
 - 每台已配对设备使用一个 Safari 标签；多个标签同时刷新可能被重放保护撤销会话。
 
-## 已发布版本
+每个公开版本都提供不可变 Git Tag 和 GitHub Release，其中包含安装包、校验值、
+兼容 Manifest 和发布说明。
 
-目前还没有公开发布的版本。未来每个正式版本都会提供 Git Tag 和 GitHub Release，
-其中包含安装包、校验值、兼容 Manifest 和发布说明。
+[0.2.0-beta.1]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.1

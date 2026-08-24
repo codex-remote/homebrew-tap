@@ -38,14 +38,13 @@ session data is included.
 
 ## Quick start
 
-The first public Beta will support Apple Silicon Macs and iPhone Safari.
+The public Beta supports Apple Silicon Macs and iPhone Safari.
 Before starting, make sure Codex is installed and signed in on the Mac, and that
 the Mac and phone are connected to the same local network.
 
 > [!IMPORTANT]
-> Runtime `0.2.0-beta.1` is being prepared as an unsigned, unnotarized public
-> Beta. The commands below will work after its GitHub prerelease asset is
-> published. Stable releases will require Developer ID signing and Apple
+> Runtime `0.2.0-beta.1` is an unsigned, unnotarized public Beta intended for
+> testing. Stable releases will require Developer ID signing and Apple
 > notarization.
 
 ### 1. Install

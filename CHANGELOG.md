@@ -10,10 +10,12 @@ notarization.
 
 ## Unreleased
 
-### Planned version: 0.2.0-beta.1
+No user-visible changes have been recorded after the first public Beta.
 
-Runtime `0.2.0-beta.1` is being prepared from the locally accepted `0.2.0`
-candidate. It cannot be installed until the GitHub prerelease asset is public.
+## [0.2.0-beta.1] - 2026-08-24
+
+The first public Apple Silicon Beta, based on the locally accepted `0.2.0`
+candidate.
 
 ### Added
 
@@ -30,7 +32,6 @@ candidate. It cannot be installed until the GitHub prerelease asset is public.
 
 ### Known limitations
 
-- The public Runtime archive is not yet uploaded.
 - This Beta is proprietary, unsigned, and not Apple notarized. See
   [BETA-LICENSE](BETA-LICENSE).
 - Only Apple Silicon Macs are supported.
@@ -39,8 +40,7 @@ candidate. It cannot be installed until the GitHub prerelease asset is public.
 - Use one Safari tab per paired device. Concurrent refreshes from multiple tabs
   can revoke the session as replay protection.
 
-## Released versions
+Each public version has an immutable Git tag and GitHub Release containing its
+archive, checksum, compatibility manifest, and release notes.
 
-No public versions have been released yet. Each future version will have a Git
-tag and GitHub Release containing its archive, checksum, compatibility manifest,
-and release notes.
+[0.2.0-beta.1]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.1

@@ -35,13 +35,12 @@ Mac 屏幕，也不会控制鼠标和键盘。
 
 ## 快速开始
 
-首个公开 Beta 将支持 Apple Silicon Mac 和 iPhone Safari。开始前，请确认 Mac 已安装
+公开 Beta 支持 Apple Silicon Mac 和 iPhone Safari。开始前，请确认 Mac 已安装
 并登录 Codex，并且 Mac 与手机连接在同一局域网。
 
 > [!IMPORTANT]
-> Runtime `0.2.0-beta.1` 正在准备为未签名、未经过 Apple 公证的公开 Beta。GitHub
-> prerelease 资产上传后，下面的命令才可使用。未来稳定版仍要求 Developer ID 签名
-> 和 Apple 公证。
+> Runtime `0.2.0-beta.1` 是面向测试的公开 Beta，未签名且未经过 Apple 公证。未来
+> 稳定版仍要求 Developer ID 签名和 Apple 公证。
 
 ### 1. 安装
 

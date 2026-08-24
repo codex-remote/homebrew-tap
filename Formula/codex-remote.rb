@@ -1,9 +1,10 @@
 class CodexRemote < Formula
   desc "Use a phone to control local Codex sessions over your LAN"
   homepage "https://github.com/codex-remote"
-  url "https://github.com/codex-remote/homebrew-tap/releases/download/v0.2.0/codex-remote-runtime-0.2.0-darwin-arm64.tar.gz"
-  version "0.2.0"
-  sha256 "397e081d677730c0a9f6b58467afdb7171354582dacaf5bfdf2cd73496b1a11d"
+  url "https://github.com/codex-remote/homebrew-tap/releases/download/v0.2.0-beta.1/codex-remote-runtime-0.2.0-beta.1-darwin-arm64.tar.gz"
+  version "0.2.0-beta.1"
+  sha256 "3838452a07c0f785c3f2d193561276d6ff3010f724afc41aafc91ce1ba4ffc4a"
+  license :cannot_represent
 
   depends_on arch: :arm64
   depends_on :macos
@@ -16,6 +17,9 @@ class CodexRemote < Formula
 
   def caveats
     <<~EOS
+      This is a public beta that is not signed with Apple Developer ID and is
+      not notarized by Apple. Install it only if you accept this limitation.
+
       Complete the per-user setup after installation:
         codex-remote setup --workspace-root /path/to/your/work
 
