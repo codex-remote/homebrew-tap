@@ -3,13 +3,19 @@
 [English](CHANGELOG.md)
 
 本文档记录 Codex Remote Runtime 面向用户的变化。项目采用
-[语义化版本](https://semver.org/lang/zh-CN/)。只有当不可变 Git Tag、完成签名和
-Runtime 资产和 GitHub Release 均已公开时，该版本才算对外发布。稳定版另外要求
-Developer ID 签名和 Apple 公证。
+[语义化版本](https://semver.org/lang/zh-CN/)。只有当不可变 Git Tag、Runtime 资产
+和 GitHub Release 均已公开时，该版本才算对外发布。稳定版另外要求 Developer ID
+签名和 Apple 公证。
 
 ## 尚未发布
 
-`0.2.0-beta.3` 之后暂时没有新的用户可见变更。
+### 文档
+
+- 增加运行要求、配对生命周期、安全与网络模型、故障排查、Beta 限制，以及经过验证的
+  卸载和彻底清理说明。
+- 增加公开 Roadmap、贡献与安全说明、结构化 Issue 表单，以及更清晰的内容入口和项目
+  支持说明。
+- 使 Formula 描述与 caveats 和“远程工作台”的产品定位及数据保留行为保持一致。
 
 ## [0.2.0-beta.3] - 2026-08-24
 

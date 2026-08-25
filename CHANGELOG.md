@@ -10,7 +10,14 @@ notarization.
 
 ## Unreleased
 
-No user-visible changes have been recorded after `0.2.0-beta.3`.
+### Documentation
+
+- Add requirements, pairing lifecycle, security and network model,
+  troubleshooting, Beta limitations, and verified uninstall and purge guidance.
+- Add a public Roadmap, contribution and security guidance, structured issue
+  forms, and clearer discovery links and project-support guidance.
+- Align the Formula description and caveats with the remote-workbench product
+  positioning and data-retention behavior.
 
 ## [0.2.0-beta.3] - 2026-08-24
 

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title description">
+  <title id="title">Codex Remote social preview</title>
+  <desc id="description">Your phone is a remote workbench for Codex running on your Mac, shown alongside real Codex Remote project and conversation screens.</desc>
+  <defs>
+    <clipPath id="front-screen">
+      <rect x="759" y="77" width="260" height="488" rx="22"/>
+    </clipPath>
+    <clipPath id="back-screen">
+      <rect x="1000" y="132" width="218" height="408" rx="19"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1280" height="640" fill="#f4f5f1"/>
+  <rect x="720" width="560" height="640" fill="#dfece7"/>
+  <rect width="1280" height="10" fill="#1f8b67"/>
+
+  <g transform="translate(68 52)">
+    <rect width="70" height="70" rx="8" fill="#1d201e"/>
+    <text x="35" y="51" text-anchor="middle" fill="#ffffff" font-family="Iowan Old Style, Georgia, serif" font-size="48">C</text>
+    <text x="92" y="29" fill="#1d201e" font-family="Avenir Next Condensed, sans-serif" font-size="26" font-weight="700">CODEX REMOTE</text>
+    <text x="92" y="57" fill="#68706b" font-family="Avenir Next, sans-serif" font-size="15" font-weight="600">PUBLIC BETA · APPLE SILICON</text>
+  </g>
+
+  <text x="68" y="220" fill="#1d201e" font-family="Avenir Next, sans-serif" font-size="59" font-weight="700">Your phone is a</text>
+  <text x="68" y="292" fill="#1f8b67" font-family="Avenir Next, sans-serif" font-size="59" font-weight="700">remote workbench</text>
+  <text x="68" y="364" fill="#1d201e" font-family="Avenir Next, sans-serif" font-size="59" font-weight="700">for Codex.</text>
+
+  <text x="68" y="430" fill="#474e4a" font-family="Avenir Next, sans-serif" font-size="25">Codex runs on your Mac.</text>
+  <text x="68" y="466" fill="#474e4a" font-family="Avenir Next, sans-serif" font-size="25">Project files stay there.</text>
+
+  <g transform="translate(68 555)" font-family="Avenir Next Condensed, sans-serif" font-size="16" font-weight="700">
+    <rect y="-13" width="7" height="18" fill="#1f8b67"/>
+    <text x="19" fill="#323834">LOCAL NETWORK</text>
+    <rect x="176" y="-13" width="7" height="18" fill="#4773a8"/>
+    <text x="195" fill="#323834">NO SCREEN STREAMING</text>
+  </g>
+
+  <g transform="rotate(2 1105 336)">
+    <rect x="988" y="118" width="242" height="436" rx="31" fill="#202321"/>
+    <rect x="1000" y="132" width="218" height="408" rx="19" fill="#f7f7f4"/>
+    <image href="mobile-projects.png" x="1000" y="132" width="218" height="408" preserveAspectRatio="xMidYMid slice" clip-path="url(#back-screen)"/>
+    <rect x="1072" y="142" width="74" height="8" rx="4" fill="#202321"/>
+  </g>
+
+  <g transform="rotate(-2 889 321)">
+    <rect x="746" y="62" width="286" height="518" rx="35" fill="#1d201e"/>
+    <rect x="759" y="77" width="260" height="488" rx="22" fill="#f8f8f5"/>
+    <image href="mobile-conversation.png" x="759" y="77" width="260" height="488" preserveAspectRatio="xMidYMid slice" clip-path="url(#front-screen)"/>
+    <rect x="848" y="87" width="82" height="9" rx="5" fill="#1d201e"/>
+  </g>
+
+  <circle cx="1205" cy="67" r="9" fill="#1f8b67"/>
+  <circle cx="1235" cy="67" r="9" fill="#4773a8"/>
+</svg>

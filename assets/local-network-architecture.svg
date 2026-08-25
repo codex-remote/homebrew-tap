@@ -75,7 +75,7 @@
 
   <g transform="translate(238 680)">
     <circle cx="0" cy="0" r="6" fill="#218765"/>
-    <text x="18" y="7" fill="#4f5551" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="19">Codex Remote traffic stays on your LAN</text>
+    <text x="18" y="7" fill="#4f5551" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="19">Phone-to-Mac traffic stays on your LAN</text>
     <circle cx="484" cy="0" r="6" fill="#426c9c"/>
     <text x="502" y="7" fill="#4f5551" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="19">No screen streaming</text>
     <circle cx="826" cy="0" r="6" fill="#b76545"/>

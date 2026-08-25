@@ -1,0 +1,50 @@
+name: Feature request
+description: Describe a concrete Codex workflow that the public Runtime does not support.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Focus on the workflow and current obstacle. The Runtime source is private, so implementation contributions are not currently accepted through this repository.
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow
+      description: What are you trying to accomplish with Codex from your phone?
+    validations:
+      required: true
+  - type: textarea
+    id: obstacle
+    attributes:
+      label: Current obstacle
+      description: What prevents or complicates this workflow today?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the observable result without prescribing an internal implementation.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Product area
+      options:
+        - Setup and installation
+        - Pairing and devices
+        - Projects and sessions
+        - Task execution and results
+        - Diagnostics and recovery
+        - Security and networking
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Current Beta boundaries
+      options:
+        - label: I understand that the current Beta is Apple Silicon, iPhone Safari, and same-local-network only.
+          required: true

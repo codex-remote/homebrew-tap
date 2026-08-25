@@ -1,0 +1,82 @@
+name: Bug report
+description: Report a reproducible Codex Remote install or Runtime problem.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include pairing links, QR codes, credentials, private source code, or unreviewed logs. Security concerns must use private vulnerability reporting.
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before submitting
+      options:
+        - label: I upgraded to the latest public Beta.
+          required: true
+        - label: I reviewed the README Troubleshooting and Beta limitations sections.
+          required: true
+        - label: I removed secrets, project content, and personal paths from the information below.
+          required: true
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: Affected workflow
+      options:
+        - Homebrew installation
+        - Setup or repair
+        - Pairing
+        - Project or session browsing
+        - Task execution or results
+        - Upgrade or rollback
+        - Uninstall or purge
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: runtime-version
+    attributes:
+      label: Runtime version
+      description: Output from codex-remote version.
+      placeholder: 0.2.0-beta.3
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: macOS version, Mac model or chip, Codex version, and iPhone/iOS/Safari version when relevant.
+      placeholder: macOS 15.x, Apple M-series, codex-cli ..., iPhone ... / iOS ...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Run ...
+        2. Open ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Doctor output
+      description: Paste reviewed output from codex-remote doctor or doctor --json. Remove personal paths and sensitive values first.
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add only reviewed screenshots or details that are necessary to reproduce the problem.
+    validations:
+      required: false

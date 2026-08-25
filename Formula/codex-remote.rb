@@ -1,5 +1,5 @@
 class CodexRemote < Formula
-  desc "Use a phone to control local Codex sessions over your LAN"
+  desc "Use your phone as a remote workbench for Codex running on your Mac"
   homepage "https://github.com/codex-remote"
   url "https://github.com/codex-remote/homebrew-tap/releases/download/v0.2.0-beta.3/codex-remote-runtime-0.2.0-beta.3-darwin-arm64.tar.gz"
   version "0.2.0-beta.3"
@@ -28,6 +28,12 @@ class CodexRemote < Formula
 
       Existing PostgreSQL and Valkey services are not modified. Ordinary
       brew upgrade, brew reinstall, and codex-remote uninstall preserve data.
+
+      Before removing the Homebrew package, stop services and keep data with:
+        codex-remote uninstall
+
+      To permanently remove state and Keychain credentials instead:
+        codex-remote uninstall --purge --yes
     EOS
   end
 
