@@ -235,9 +235,14 @@ brew uninstall codex-remote
 
 ## 许可与源码开放范围
 
-应用以闭源二进制形式通过这个公开仓库发布，并遵循
-[公开 Beta 二进制许可](BETA-LICENSE)。Beta 未经过 Developer ID 签名和 Apple 公证；
-具体实现源码和内部文档目前暂不公开。
+Codex Remote 源码已经在
+[codex-remote 组织](https://github.com/codex-remote)中公开，并采用
+[Apache License 2.0](LICENSE)。未来 Runtime 构建产物采用相同许可证。已经发布的
+`0.2.0-beta.1` 至 `0.2.0-beta.3` 归档仍保留当时的
+[公开 Beta 二进制许可](BETA-LICENSE)，并且没有 Developer ID 签名或 Apple 公证。
+
+Codex Remote 是独立开源项目，与 OpenAI 没有关联或背书关系。Codex 和 OpenAI
+属于其各自权利人的商标。
 
 ## 支持项目
 

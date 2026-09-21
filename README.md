@@ -266,10 +266,17 @@ brew uninstall codex-remote
 
 ## Licensing & source availability
 
-The application is distributed from this public repository as proprietary
-binaries under the [Public Beta Binary License](BETA-LICENSE). Beta binaries
-are not Developer ID signed or Apple notarized. Implementation source and
-internal documentation are currently private.
+Codex Remote source is available across the
+[codex-remote organization](https://github.com/codex-remote) under the
+[Apache License 2.0](LICENSE). Future Runtime artifacts are distributed under
+the same license. The already published `0.2.0-beta.1` through
+`0.2.0-beta.3` archives retain their historical
+[Public Beta Binary License](BETA-LICENSE); they are also unsigned and not
+Apple notarized.
+
+Codex Remote is an independent open-source project and is not affiliated with
+or endorsed by OpenAI. Codex and OpenAI are trademarks of their respective
+owners.
 
 ## Support the project
 

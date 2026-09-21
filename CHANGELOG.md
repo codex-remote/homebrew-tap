@@ -10,6 +10,11 @@ notarization.
 
 ## Unreleased
 
+### Changed
+
+- Open the Codex Remote source repositories under Apache License 2.0 while
+  preserving the historical license of already published Beta archives.
+
 ### Documentation
 
 - Add requirements, pairing lifecycle, security and network model,

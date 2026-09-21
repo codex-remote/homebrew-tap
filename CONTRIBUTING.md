@@ -1,9 +1,9 @@
 # Contributing to Codex Remote
 
-Thank you for helping improve Codex Remote. This public repository contains the
-Homebrew Formula, public documentation, binary license, and versioned Runtime
-release assets. The Runtime implementation is proprietary and its source
-repositories are currently private.
+Thank you for helping improve Codex Remote. This repository contains the
+Homebrew Formula, installation documentation, historical Beta license, and
+versioned Runtime release assets. Implementation repositories are public under
+the `codex-remote` organization and accept focused pull requests.
 
 ## Useful contributions
 
@@ -14,9 +14,9 @@ repositories are currently private.
 - Focused product feedback that describes a real Codex workflow and the current
   obstacle.
 
-There is not currently a public source contribution path for Runtime features.
-Feature implementation offers may remain blocked until the relevant source
-repository is public or another contribution boundary is documented.
+Runtime feature changes should be proposed in the repository that owns the
+affected component. Cross-repository changes must keep contracts and commits
+independently reviewable.
 
 ## Before opening an issue
 

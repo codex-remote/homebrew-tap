@@ -22,7 +22,9 @@ devices, networks, or accounts you do not own or have permission to assess.
 
 ## Current Beta security boundaries
 
-- The public Beta binaries are proprietary, unsigned, and not Apple notarized.
+- The `0.2.0-beta.1` through `0.2.0-beta.3` archives retain their historical
+  binary license and are unsigned and not Apple notarized. Current source and
+  future artifacts use Apache-2.0.
 - The phone connects to the Mac over plain HTTP on the same local network; TLS
   and public internet access are not available.
 - A pairing QR code or full link contains a one-time credential and must not be

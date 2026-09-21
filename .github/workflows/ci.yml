@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  formula:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - run: ruby -c Formula/codex-remote.rb
+      - run: brew style Formula/codex-remote.rb
+      - name: Audit Formula in an isolated Tap
+        run: |
+          brew tap-new codex-remote/ci-audit
+          cp Formula/codex-remote.rb "$(brew --repo codex-remote/ci-audit)/Formula/codex-remote.rb"
+          brew audit --strict codex-remote/ci-audit/codex-remote
