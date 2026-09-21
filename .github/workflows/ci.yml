@@ -15,7 +15,7 @@ jobs:
   formula:
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: ruby -c Formula/codex-remote.rb
       - run: brew style Formula/codex-remote.rb
       - name: Audit Formula in an isolated Tap
