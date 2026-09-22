@@ -1,9 +1,9 @@
 class CodexRemote < Formula
   desc "Use your phone as a remote workbench for Codex running on your Mac"
   homepage "https://github.com/codex-remote"
-  url "https://github.com/codex-remote/homebrew-tap/releases/download/v0.2.0-beta.3/codex-remote-runtime-0.2.0-beta.3-darwin-arm64.tar.gz"
-  sha256 "762ca9a738b6019350bed38f78203a1b80488210814b05a0b5fd373a0395c3af"
-  license :cannot_represent
+  url "https://github.com/codex-remote/homebrew-tap/releases/download/v0.2.0-beta.4/codex-remote-runtime-0.2.0-beta.4-darwin-arm64.tar.gz"
+  sha256 "b234259b44375dfff3d8a9b808b1e8a2e3204df0226c897ae691a1044a45486c"
+  license "Apache-2.0"
 
   depends_on arch: :arm64
   depends_on :macos
