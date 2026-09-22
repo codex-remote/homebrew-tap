@@ -15,6 +15,13 @@ notarization.
 - Open the Codex Remote source repositories under Apache License 2.0 while
   preserving the historical license of already published Beta archives.
 
+## [0.2.0-beta.5] - 2026-09-22
+
+### Fixed
+
+- Use large square-cell terminal QR rendering by default so ordinary iPhone
+  cameras can scan pairing codes without terminal-font-specific geometry.
+
 ## [0.2.0-beta.4] - 2026-09-22
 
 ### Fixed
