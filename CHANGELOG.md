@@ -15,6 +15,15 @@ notarization.
 - Open the Codex Remote source repositories under Apache License 2.0 while
   preserving the historical license of already published Beta archives.
 
+## [0.2.0-beta.4] - 2026-09-22
+
+### Fixed
+
+- Wait for the Runtime Supervisor process tree and persisted ports during
+  restart and failed-start rollback.
+- Preserve native WebSocket project and Turn routing alongside Runtime HTTP
+  persistence.
+
 ### Documentation
 
 - Add requirements, pairing lifecycle, security and network model,

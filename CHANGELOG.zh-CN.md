@@ -14,6 +14,13 @@
 - Codex Remote 源码仓库采用 Apache License 2.0 开源，同时保留已发布 Beta 归档的
   历史许可。
 
+## [0.2.0-beta.4] - 2026-09-22
+
+### 修复
+
+- 重启和启动失败回滚会等待 Runtime Supervisor 进程树及持久化端口完全退出。
+- 保留原生 WebSocket 项目/Turn 路由，同时只持久化 Runtime HTTP 创建的 Run。
+
 ### 文档
 
 - 增加运行要求、配对生命周期、安全与网络模型、故障排查、Beta 限制，以及经过验证的
