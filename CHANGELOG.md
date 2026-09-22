@@ -15,6 +15,16 @@ notarization.
 - Open the Codex Remote source repositories under Apache License 2.0 while
   preserving the historical license of already published Beta archives.
 
+## [0.2.0-beta.6] - 2026-09-22
+
+### Fixed
+
+- Replace the oversized full-block terminal pairing QR with a medium camera
+  renderer that uses pure black/white ANSI backgrounds, square-proportioned
+  half blocks, and an extra quiet-zone border.
+- Avoid font-rendered seams between solid QR modules while keeping explicit
+  large, compact, and small renderer overrides.
+
 ## [0.2.0-beta.5] - 2026-09-22
 
 ### Fixed
@@ -95,3 +105,6 @@ archive, checksum, compatibility manifest, and release notes.
 [0.2.0-beta.1]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.1
 [0.2.0-beta.2]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.2
 [0.2.0-beta.3]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.3
+[0.2.0-beta.4]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.4
+[0.2.0-beta.5]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.5
+[0.2.0-beta.6]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.6
