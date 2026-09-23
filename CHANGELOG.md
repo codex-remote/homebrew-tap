@@ -15,6 +15,18 @@ notarization.
 - Open the Codex Remote source repositories under Apache License 2.0 while
   preserving the historical license of already published Beta archives.
 
+## [0.2.0-beta.8] - 2026-09-23
+
+### Fixed
+
+- Make bare `codex-remote pair` generate a compact, private PNG and open it in
+  the macOS image viewer, giving iPhone cameras a pixel-stable QR surface.
+- Replace the old QR encoder with a ZXing-compatible high-redundancy matrix,
+  explicit four-module quiet zone, and complete terminal background cells so
+  all three finder patterns remain closed.
+- Reduce PNG modules to 5px without interpolation; the current pairing payload
+  produces an approximately 285 x 285 image.
+
 ## [0.2.0-beta.7] - 2026-09-23
 
 ### Fixed
@@ -119,3 +131,4 @@ archive, checksum, compatibility manifest, and release notes.
 [0.2.0-beta.5]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.5
 [0.2.0-beta.6]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.6
 [0.2.0-beta.7]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.7
+[0.2.0-beta.8]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.8

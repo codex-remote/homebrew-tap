@@ -14,6 +14,16 @@
 - Codex Remote 源码仓库采用 Apache License 2.0 开源，同时保留已发布 Beta 归档的
   历史许可。
 
+## [0.2.0-beta.8] - 2026-09-23
+
+### 修复
+
+- 直接运行 `codex-remote pair` 时默认生成紧凑的私有 PNG，并在 macOS 图片查看器中
+  打开，让 iPhone 相机扫描稳定的像素二维码。
+- 改用 ZXing 兼容的高容错矩阵、显式四模块静区和完整终端背景色单元，确保三个定位
+  方框保持闭合。
+- 将 PNG 模块缩小为 5px，不使用插值；当前配对链接生成的图片约为 285 x 285。
+
 ## [0.2.0-beta.7] - 2026-09-23
 
 ### 修复
@@ -106,3 +116,4 @@
 [0.2.0-beta.5]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.5
 [0.2.0-beta.6]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.6
 [0.2.0-beta.7]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.7
+[0.2.0-beta.8]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.8
