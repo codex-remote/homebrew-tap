@@ -15,6 +15,15 @@ notarization.
 - Open the Codex Remote source repositories under Apache License 2.0 while
   preserving the historical license of already published Beta archives.
 
+## [0.2.0-beta.10] - 2026-09-23
+
+### Changed
+
+- Pairing output now uses a consistent colored terminal layout: title, expiry,
+  security notice, copyable URL, QR section, and PNG path are clearly separated.
+- URL content remains plain text for reliable copying, while `NO_COLOR` and
+  non-TTY output stay stable and searchable.
+
 ## [0.2.0-beta.9] - 2026-09-23
 
 ### Fixed
@@ -143,3 +152,4 @@ archive, checksum, compatibility manifest, and release notes.
 [0.2.0-beta.7]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.7
 [0.2.0-beta.8]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.8
 [0.2.0-beta.9]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.9
+[0.2.0-beta.10]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.10

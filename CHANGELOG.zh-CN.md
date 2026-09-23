@@ -14,6 +14,14 @@
 - Codex Remote 源码仓库采用 Apache License 2.0 开源，同时保留已发布 Beta 归档的
   历史许可。
 
+## [0.2.0-beta.10] - 2026-09-23
+
+### 变更
+
+- 配对输出改为统一的彩色终端排版：标题、有效期、安全提示、可复制 URL、二维码区域
+  和 PNG 路径清晰分隔。
+- URL 内容保持纯文本，便于可靠复制；`NO_COLOR` 和非 TTY 输出仍保持稳定、可检索。
+
 ## [0.2.0-beta.9] - 2026-09-23
 
 ### 修复
@@ -127,3 +135,4 @@
 [0.2.0-beta.7]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.7
 [0.2.0-beta.8]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.8
 [0.2.0-beta.9]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.9
+[0.2.0-beta.10]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.10
