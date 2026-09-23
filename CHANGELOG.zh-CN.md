@@ -14,6 +14,15 @@
 - Codex Remote 源码仓库采用 Apache License 2.0 开源，同时保留已发布 Beta 归档的
   历史许可。
 
+## [0.2.0-beta.9] - 2026-09-23
+
+### 修复
+
+- 恢复 `codex-remote pair` 默认在终端输出二维码和可复制的鉴权配对 URL。
+- `codex-remote start` 和 `codex-remote restart` 服务就绪后也会输出同样的一次性终端
+  二维码和 URL。
+- PNG 仍可通过 `--terminal=false --output` 显式生成。
+
 ## [0.2.0-beta.8] - 2026-09-23
 
 ### 修复
@@ -117,3 +126,4 @@
 [0.2.0-beta.6]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.6
 [0.2.0-beta.7]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.7
 [0.2.0-beta.8]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.8
+[0.2.0-beta.9]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.9
