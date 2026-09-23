@@ -14,6 +14,15 @@
 - Codex Remote 源码仓库采用 Apache License 2.0 开源，同时保留已发布 Beta 归档的
   历史许可。
 
+## [0.2.0-beta.7] - 2026-09-23
+
+### 修复
+
+- 让标准二维码静区与终端半块行保持对齐，确保顶部定位图案边框连续，不再像二维码
+  上方多出一条悬空黑线。
+- 默认相机模式收敛到约 45 x 23 个终端字符，同时保留纯黑/纯白 ANSI 背景和显式的
+  其他渲染模式。
+
 ## [0.2.0-beta.6] - 2026-09-22
 
 ### 修复
@@ -96,3 +105,4 @@
 [0.2.0-beta.4]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.4
 [0.2.0-beta.5]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.5
 [0.2.0-beta.6]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.6
+[0.2.0-beta.7]: https://github.com/codex-remote/homebrew-tap/releases/tag/v0.2.0-beta.7
