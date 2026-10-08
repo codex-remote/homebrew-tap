@@ -1,6 +1,6 @@
 # Codex Remote
 
-[English](README.md) | [安装](#快速开始) | [产品界面](#产品界面) | [Roadmap](ROADMAP.zh-CN.md) | [版本发布](https://github.com/codex-remote/homebrew-tap/releases)
+[项目主页](https://github.com/codex-remote/codex-remote) | [English](README.md) | [安装](#快速开始) | [产品界面](#产品界面) | [Roadmap](ROADMAP.zh-CN.md) | [版本发布](https://github.com/codex-remote/homebrew-tap/releases)
 
 **把手机作为远程工作台，继续使用运行于 Mac 的 Codex。**
 
@@ -41,8 +41,8 @@ Mac 屏幕，也不会控制鼠标和键盘。
 
 - Apple Silicon Mac；此 Beta 不支持 Intel Mac。
 - macOS 和 [Homebrew](https://brew.sh/)；Formula 没有声明具体的最低 macOS 版本。
-- Mac 已安装并登录 Codex CLI `0.148.0` 或更高版本。Runtime `0.2.0-beta.3`
-  已测试到 `codex-cli 0.149.0-alpha.4.1`。
+- Mac 已安装并登录 Codex CLI `0.148.0` 或更高版本。Runtime `0.2.0-beta.10`
+  已测试到 `codex-cli 0.154.0-alpha.6.2`。
 - 使用 iPhone Safari；此 Beta 尚未验证其他手机和浏览器组合。
 - iPhone 与 Mac 位于同一局域网，Mac 保持开机、唤醒并能够运行 Codex。
 - 局域网和防火墙规则允许 iPhone 访问 Setup 选定的 Gateway 端口；不支持公网访问。
@@ -50,7 +50,7 @@ Mac 屏幕，也不会控制鼠标和键盘。
 ## 快速开始
 
 > [!IMPORTANT]
-> Runtime `0.2.0-beta.3` 是面向测试的公开 Beta，未签名且未经过 Apple 公证。未来
+> Runtime `0.2.0-beta.10` 是面向测试的公开 Beta，未签名且未经过 Apple 公证。未来
 > 稳定版仍要求 Developer ID 签名和 Apple 公证。
 
 ### 1. 安装
@@ -246,8 +246,9 @@ Codex Remote 是独立开源项目，与 OpenAI 没有关联或背书关系。Co
 
 ## 支持项目
 
-如果 Codex Remote 确实解决了你的工作流问题，可以考虑为这个仓库加一个 Star。
-Star 能帮助更多 Codex 用户发现这个 Beta，并关注后续进展。
+如果 Codex Remote 确实解决了你的工作流问题，可以考虑为
+[主项目仓库](https://github.com/codex-remote/codex-remote)加一个 Star。Star 能帮助
+更多 Codex 用户发现这个 Beta，并关注后续进展。
 
 欢迎通过 [GitHub Issues](https://github.com/codex-remote/homebrew-tap/issues) 提交可复现的
 问题和聚焦的产品反馈。提交前请先阅读[公开 Roadmap](ROADMAP.zh-CN.md)、

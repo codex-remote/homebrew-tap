@@ -1,6 +1,6 @@
 # Codex Remote
 
-[简体中文](README.zh-CN.md) | [Install](#quick-start) | [Product preview](#product-preview) | [Roadmap](ROADMAP.md) | [Releases](https://github.com/codex-remote/homebrew-tap/releases)
+[Project home](https://github.com/codex-remote/codex-remote) | [简体中文](README.zh-CN.md) | [Install](#quick-start) | [Product preview](#product-preview) | [Roadmap](ROADMAP.md) | [Releases](https://github.com/codex-remote/homebrew-tap/releases)
 
 **Use your phone as a remote workbench for Codex running on your Mac.**
 
@@ -46,7 +46,7 @@ Mac. There is no Mac screen stream or remote mouse and keyboard control.
 - macOS and [Homebrew](https://brew.sh/). The Formula does not declare a
   specific minimum macOS version.
 - Codex CLI `0.148.0` or later, installed and signed in on the Mac. Runtime
-  `0.2.0-beta.3` was tested through `codex-cli 0.149.0-alpha.4.1`.
+  `0.2.0-beta.10` was tested through `codex-cli 0.154.0-alpha.6.2`.
 - An iPhone running Safari. Other phone and browser combinations have not been
   validated for this Beta.
 - The iPhone and Mac on the same local network, with the Mac powered on, awake,
@@ -57,7 +57,7 @@ Mac. There is no Mac screen stream or remote mouse and keyboard control.
 ## Quick start
 
 > [!IMPORTANT]
-> Runtime `0.2.0-beta.3` is an unsigned, unnotarized public Beta intended for
+> Runtime `0.2.0-beta.10` is an unsigned, unnotarized public Beta intended for
 > testing. Stable releases will require Developer ID signing and Apple
 > notarization.
 
@@ -280,7 +280,8 @@ owners.
 
 ## Support the project
 
-If Codex Remote solves a workflow you have, consider starring this repository.
+If Codex Remote solves a workflow you have, consider starring the
+[main project repository](https://github.com/codex-remote/codex-remote).
 Stars help more Codex users discover the Beta and follow its progress.
 
 Bug reports and focused product feedback are welcome through
