@@ -5,8 +5,9 @@
 **Use your phone as a remote workbench for Codex running on your Mac.**
 
 Codex Remote is designed for tasks that take longer than you want to spend at
-your desk. Start work on the Mac, then use your phone to check progress, send a
-follow-up, or review the result from elsewhere on the same local network.
+your desk. Start work on the Mac, then use your phone over the same LAN or a
+free Tailscale Personal network to check progress, send a follow-up, or review
+the result while away.
 
 It is not a remote desktop. Your phone works with Codex projects, sessions,
 tasks, status, and results without streaming the Mac screen or controlling its
@@ -36,9 +37,13 @@ session data is included.
 
 ![Codex Remote connects an iPhone and Mac over the local network](assets/local-network-architecture.svg)
 
+![Codex Remote local and private Tailscale access](assets/access-modes-architecture.svg)
+
 The phone talks directly to the Codex Remote Gateway on your Mac. The Gateway
 passes requests to Codex Remote, which works with Codex and projects on that
-Mac. There is no Mac screen stream or remote mouse and keyboard control.
+Mac. There is no Mac screen stream or remote mouse and keyboard control. Away
+from home, Tailscale creates a private WireGuard path without a fixed public IP,
+dynamic DNS, or router port forwarding.
 
 ## Requirements
 
@@ -49,10 +54,10 @@ Mac. There is no Mac screen stream or remote mouse and keyboard control.
   `0.2.0-beta.10` was tested through `codex-cli 0.154.0-alpha.6.2`.
 - An iPhone running Safari. Other phone and browser combinations have not been
   validated for this Beta.
-- The iPhone and Mac on the same local network, with the Mac powered on, awake,
-  and able to run Codex.
-- Local network and firewall rules that allow the iPhone to reach the Gateway
-  port selected during Setup. Public internet access is not supported.
+- A Mac that remains powered on, connected, awake, and able to run Codex.
+- Local mode requires the iPhone to reach the Gateway port on the trusted LAN.
+- Private remote mode requires the official Tailscale client on both devices
+  and the same tailnet account.
 
 ## Quick start
 
@@ -93,6 +98,31 @@ Treat the QR code and full pairing link like a password. Each link contains a
 one-time credential, expires at the time printed by `pair` (10 minutes by
 default), and cannot be reused after a successful exchange.
 
+## Reach a Mac at home or the office
+
+[Tailscale Personal](https://tailscale.com/pricing) is currently free for
+personal, non-commercial use and is the recommended private remote path. It
+does not publish the Gateway to the public internet.
+
+The current public Runtime `0.2.0-beta.10` uses an explicit Tailnet origin:
+
+```bash
+codex-remote status
+/Applications/Tailscale.app/Contents/MacOS/Tailscale ip -4
+codex-remote pair --origin http://<TAILNET-IP>:<GATEWAY-PORT>
+```
+
+Turn off iPhone Wi-Fi, keep cellular data and Tailscale connected, then scan
+the QR code. See the complete [private remote access guide](https://github.com/codex-remote/codex-remote/blob/main/docs/private-remote-access.md).
+
+Runtime source now contains automatic mode selection for the next Beta that
+passes its release gates:
+
+```bash
+codex-remote network tailscale
+codex-remote pair
+```
+
 ## Pairing and devices
 
 Run `codex-remote pair` once for each browser or device you want to add. A new
@@ -126,12 +156,12 @@ configuration, ports, database, workspace roots, and paired-device state.
 
 ## Security & network model
 
-- The iPhone connects to the selected Gateway port on the Mac over the local
-  network. This Beta does not provide a cloud relay or public internet endpoint.
-- Phone-to-Mac traffic uses plain HTTP in this Beta. TLS is not available, so
-  pairing credentials, requests, status, results, and any source content viewed
-  in the phone interface are not encrypted in transit. Use a trusted local
-  network; do not port-forward or otherwise expose the Gateway to the internet.
+- The iPhone can use a trusted LAN or a private Tailscale network. This Beta
+  does not provide a public internet endpoint without device identity.
+- Local mode uses plain HTTP without TLS and must stay on a trusted network.
+  Tailscale mode also displays an HTTP URL, but internet transport is inside
+  WireGuard's end-to-end encrypted tunnel.
+- Do not port-forward the Gateway or publish it with Tailscale Funnel.
 - `codex-remote pair` creates a one-time pairing credential. The link stores it
   in the URL fragment, and Mobile Web removes that fragment before exchanging
   it. Do not share screenshots or terminal output containing the QR or link.
@@ -147,7 +177,7 @@ configuration, ports, database, workspace roots, and paired-device state.
 Project files remain stored on your Mac, and Codex execution happens there.
 Information requested by the phone interface, including project and session
 metadata, prompts, status, results, and viewed source content, travels over the
-local network to that browser. Codex itself may use its own network services
+trusted LAN or private Tailnet to that browser. Codex itself may use its network services
 under your existing Codex installation and account.
 
 Codex Remote stores its per-user configuration, database, logs, and service
@@ -203,14 +233,17 @@ A pairing link is intentionally single-use.
 
 ### The link opens, but the iPhone cannot connect
 
-1. Confirm that the Mac is awake and both devices are on the same local
-   network. Guest Wi-Fi, client isolation, a VPN, or a firewall can prevent
-   device-to-device access.
+1. Confirm that the Mac is awake. In local mode, place both devices on the same
+   trusted network. In Tailscale mode, confirm both are online in one tailnet.
 2. Run `codex-remote doctor` on the Mac. Doctor must report healthy Run Server
    and Gateway checks before phone access can work.
 3. Allow the selected Codex Remote Gateway port through local firewall rules.
    Do not disable the firewall globally and do not expose the port publicly.
 4. Generate a fresh pairing link after network access is restored.
+
+For Tailscale, open `http://<TAILNET-IP>:<GATEWAY-PORT>/gateway/healthz` from
+the iPhone first. Use `tailscale ping` to distinguish a direct path from an
+encrypted DERP relay.
 
 ### A paired Safari session suddenly loses access
 
@@ -253,9 +286,10 @@ brew uninstall codex-remote
 
 - Apple Silicon Mac and iPhone Safari only; other environments are unvalidated
   or unsupported.
-- The iPhone must be able to reach the Mac on the same local network.
-- The phone connection is plain HTTP. There is no TLS or public internet
-  endpoint.
+- The iPhone must reach the Mac through a trusted LAN or the same Tailscale
+  tailnet.
+- The phone URL uses HTTP. Tailscale encrypts its private path with WireGuard;
+  there is still no public HTTPS Gateway.
 - Use one Safari tab per paired device because concurrent token refresh can
   revoke the session.
 - The binaries are not Developer ID signed or Apple notarized and may be

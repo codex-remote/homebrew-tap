@@ -8,7 +8,7 @@
 ## 当前可用
 
 - 通过第三方 Homebrew Tap 分发的 Apple Silicon macOS Runtime。
-- iPhone Safari 在同一局域网内访问。
+- iPhone Safari 通过同一可信局域网，或 Tailscale 私有网络访问。
 - 浏览项目和 Codex 会话、发送任务、查看实时状态和结果。
 - 一次性二维码或链接配对、浏览器退出、凭证刷新和重放保护。
 - 用户级 Setup、隔离的 PostgreSQL 与内置 Valkey 状态、单一 Runtime 登录项、健康
@@ -20,6 +20,7 @@
 - 在保留服务端重放保护的同时，避免 Safari 多标签并发刷新导致已配对会话失效。
 - 改进已保存端口冲突的诊断，并清晰区分 Runtime 本机健康与 iPhone 到 Mac 的网络
   可达性。
+- 发布自动局域网/Tailscale 模式选择、在线 iOS 设备发现与 MagicDNS 配对。
 - 每个公开 Beta 持续覆盖干净安装、升级、回滚、卸载和真机回归。
 
 ## Stable 分发门禁
@@ -33,12 +34,12 @@
 ## 当前不提供
 
 - Intel、Windows 或 Linux Runtime 包。
-- 手机连接的公网端点或 TLS。
+- 无需 Tailnet 设备身份的公共互联网端点或 TLS。
 - 面向普通用户的 Mac 端设备管理顶层命令。
 - Beta 版本的生产支持或兼容性承诺。
 
-只有公网访问所需的身份认证、传输安全、防滥用、容量限制、恢复行为和运维验证全部
-实现并记录后，才会对外宣传该能力。
+Tailscale 是已经验证的私有远程路径。无需设备身份的公共互联网访问仍需完成 TLS、
+防滥用、容量限制、恢复行为和运维验证后才会评估。
 
 ## 反馈
 

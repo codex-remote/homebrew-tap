@@ -9,7 +9,8 @@ promises. Items move only after implementation and real-device validation.
 ## Available now
 
 - Apple Silicon macOS Runtime distributed through the third-party Homebrew Tap.
-- iPhone Safari access over the same local network.
+- iPhone Safari access over the same trusted LAN or a private Tailscale
+  network.
 - Project and Codex session browsing, task submission, live status, and results.
 - One-time QR or link pairing, browser logout, credential refresh, and replay
   protection.
@@ -24,6 +25,8 @@ promises. Items move only after implementation and real-device validation.
   retaining server-side replay protection.
 - Improve diagnostics for saved-port conflicts and the boundary between local
   Runtime health and iPhone-to-Mac network reachability.
+- Release automatic local/Tailscale mode selection, online iOS discovery, and
+  MagicDNS pairing.
 - Continue clean-install, upgrade, rollback, uninstall, and real-device
   regression coverage for every public Beta.
 
@@ -40,13 +43,14 @@ promises. Items move only after implementation and real-device validation.
 ## Not available today
 
 - Intel, Windows, and Linux Runtime packages.
-- A public internet endpoint or TLS for the phone connection.
+- A public internet endpoint without Tailnet device identity, or TLS for that
+  path.
 - A supported top-level command for Mac-side device management.
 - A production support or compatibility commitment for Beta releases.
 
-Public internet access will not be advertised until its authentication,
-transport security, abuse controls, capacity limits, recovery behavior, and
-operational validation are implemented and documented.
+Tailscale is the verified private remote path. Public access without device
+identity still requires TLS, abuse controls, capacity, recovery, and operations
+to be implemented and documented.
 
 ## Feedback
 
