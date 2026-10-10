@@ -5,7 +5,8 @@
 **把手机作为远程工作台，继续使用运行于 Mac 的 Codex。**
 
 Codex Remote 适合那些不值得一直守在电脑前等待的任务。你可以在 Mac 上开始工作，
-然后在同一局域网内通过手机查看进度、发送后续要求或阅读结果。
+然后通过同一局域网，或免费的 Tailscale Personal 私有网络，从外面查看进度、发送
+后续要求或阅读结果。
 
 它不是远程桌面。手机直接使用 Codex 的项目、会话、任务、状态和结果，不会传输整个
 Mac 屏幕，也不会控制鼠标和键盘。
@@ -33,9 +34,12 @@ Mac 屏幕，也不会控制鼠标和键盘。
 
 ![Codex Remote 通过局域网连接 iPhone 和 Mac](assets/local-network-architecture.svg)
 
+![Codex Remote 局域网与 Tailscale 私有远程访问](assets/access-modes-architecture.svg)
+
 手机直接连接 Mac 上的 Codex Remote Gateway。Gateway 将请求交给 Codex Remote，
 后者使用同一台 Mac 上的 Codex 和项目。整个过程不传输 Mac 屏幕，也不远程控制鼠标
-和键盘。
+和键盘。人在外面时，Tailscale 通过 WireGuard 建立私有加密路径，不需要固定公网 IP、
+动态 DNS 或路由器端口转发。
 
 ## 运行要求
 
@@ -44,8 +48,9 @@ Mac 屏幕，也不会控制鼠标和键盘。
 - Mac 已安装并登录 Codex CLI `0.148.0` 或更高版本。Runtime `0.2.0-beta.10`
   已测试到 `codex-cli 0.154.0-alpha.6.2`。
 - 使用 iPhone Safari；此 Beta 尚未验证其他手机和浏览器组合。
-- iPhone 与 Mac 位于同一局域网，Mac 保持开机、唤醒并能够运行 Codex。
-- 局域网和防火墙规则允许 iPhone 访问 Setup 选定的 Gateway 端口；不支持公网访问。
+- Mac 保持开机、联网、唤醒并能够运行 Codex。
+- 局域网模式要求 iPhone 能访问 Setup 选定的 Gateway 端口。
+- 私有远程模式要求 Mac 和 iPhone 安装官方 Tailscale 客户端并登录同一 Tailnet。
 
 ## 快速开始
 
@@ -83,6 +88,29 @@ Mac 上一样发送任务。
 请把二维码和完整配对链接当作密码保管。每个链接都含有一次性凭证，会在 `pair` 打印
 的时间失效（默认 10 分钟），成功兑换后不能再次使用。
 
+## 在外面连接家里或办公室的 Mac
+
+[Tailscale Personal](https://tailscale.com/pricing) 当前对个人非商业用途免费，是本
+项目推荐的私有远程接入方式。它不会把 Gateway 发布到普通公网。
+
+当前公开 Runtime `0.2.0-beta.10` 使用显式 Tailnet Origin：
+
+```bash
+codex-remote status
+/Applications/Tailscale.app/Contents/MacOS/Tailscale ip -4
+codex-remote pair --origin http://<TAILNET-IP>:<GATEWAY-PORT>
+```
+
+关闭 iPhone Wi-Fi、保持蜂窝网络和 Tailscale 已连接，再扫描二维码。完整原理、安装、
+验证和排障见[私有远程访问指南](https://github.com/codex-remote/codex-remote/blob/main/docs/private-remote-access.zh-CN.md)。
+
+Runtime 当前源码已经加入自动模式选择，待下一次完成发布门禁的 Beta 提供：
+
+```bash
+codex-remote network tailscale
+codex-remote pair
+```
+
 ## 配对与设备
 
 每增加一个浏览器或设备，需要运行一次 `codex-remote pair`。新配对不会撤销此前已配对
@@ -112,11 +140,11 @@ brew upgrade codex-remote
 
 ## 安全与网络模型
 
-- iPhone 通过局域网连接 Mac 上选定的 Gateway 端口。此 Beta 没有云端中继或公网
-  访问端点。
-- 手机与 Mac 之间当前使用普通 HTTP，没有 TLS。因此，配对凭证、请求、状态、结果，
-  以及手机界面中查看的源代码内容在传输中没有加密。请只在可信局域网内使用，不要做
-  端口转发，也不要通过其他方式把 Gateway 暴露到公网。
+- iPhone 可通过可信局域网，或 Tailscale 私有网络连接 Mac 的 Gateway。此 Beta 不
+  提供无需设备身份的公共互联网端点。
+- 局域网路径使用普通 HTTP，没有 TLS，只能用于可信网络。Tailscale 路径同样显示
+  HTTP URL，但互联网传输位于 WireGuard 端到端加密隧道内。
+- 不要做路由器端口转发，也不要使用 Tailscale Funnel 把 Gateway 发布到普通公网。
 - `codex-remote pair` 创建一次性配对凭证。链接把凭证放在 URL Fragment 中，
   Mobile Web 会在兑换前从地址栏中移除它。不要分享包含二维码或完整链接的截图和终端
   输出。
@@ -127,9 +155,9 @@ brew upgrade codex-remote
 
 ## 隐私与数据
 
-项目文件存储在 Mac 上，Codex 也在 Mac 上执行。手机界面请求的信息会通过局域网发送
-到该浏览器，包括项目与会话元数据、提示词、状态、结果，以及用户主动查看的源代码
-内容。Codex 本身仍可能通过现有 Codex 安装和账号使用其网络服务。
+项目文件存储在 Mac 上，Codex 也在 Mac 上执行。手机界面请求的信息会通过可信局域网
+或 Tailscale 私有网络发送到该浏览器，包括项目与会话元数据、提示词、状态、结果，
+以及用户主动查看的源代码内容。Codex 本身仍可能通过现有安装和账号使用其网络服务。
 
 Codex Remote 将用户配置、数据库、日志和服务状态存储在
 `~/Library/Application Support/CodexRemote`，并将 PostgreSQL 与 Valkey 凭证存入
@@ -180,13 +208,17 @@ codex-remote setup --codex-binary /absolute/path/to/codex \
 
 ### 链接能打开，但 iPhone 无法连接
 
-1. 确认 Mac 处于唤醒状态，并且两台设备连接同一局域网。访客 Wi-Fi、客户端隔离、
-   VPN 或防火墙都可能阻止设备间访问。
+1. 确认 Mac 处于唤醒状态。局域网模式下确认两台设备在同一可信网络；Tailscale
+   模式下确认两台设备在线并登录同一 Tailnet。
 2. 在 Mac 上运行 `codex-remote doctor`。Run Server 和 Gateway 都显示健康后，手机
    才可能正常访问。
 3. 在本地防火墙规则中允许选定的 Codex Remote Gateway 端口。不要全局关闭防火墙，
    也不要把该端口暴露到公网。
 4. 网络恢复后，生成新的配对链接。
+
+Tailscale 模式可以先在 iPhone 打开
+`http://<TAILNET-IP>:<GATEWAY-PORT>/gateway/healthz`，再用 `tailscale ping` 判断当前
+是点对点直连还是加密 DERP 中继。
 
 ### 已配对的 Safari 突然失去访问权限
 
@@ -226,8 +258,9 @@ brew uninstall codex-remote
 ## Beta 限制
 
 - 仅支持 Apple Silicon Mac 和 iPhone Safari；其他环境未经验证或不受支持。
-- iPhone 必须能在同一局域网内访问 Mac。
-- 手机连接使用普通 HTTP，没有 TLS 或公网访问端点。
+- iPhone 必须能通过可信局域网或同一 Tailscale Tailnet 访问 Mac。
+- 手机 URL 使用普通 HTTP；Tailscale 模式依靠 WireGuard 加密私有路径，仍不提供
+  普通公网 HTTPS 端点。
 - 每台已配对设备只使用一个 Safari 标签，否则并发令牌刷新可能撤销会话。
 - 二进制文件没有 Developer ID 签名，也未经过 Apple 公证，可能被 macOS 或受管理
   设备的安全策略阻止。不要全局关闭 Gatekeeper。

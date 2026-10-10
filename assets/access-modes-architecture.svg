@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-labelledby="title description">
+  <title id="title">Codex Remote local and private remote access</title>
+  <desc id="description">An iPhone reaches Codex Remote on a Mac either through local Wi-Fi or through an encrypted private Tailscale network. Codex and project files remain on the Mac.</desc>
+  <defs>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1 11 6 1 11Z" fill="#218765"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1 11 6 1 11Z" fill="#426c9c"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="820" fill="#f6f6f2"/>
+  <text x="800" y="68" text-anchor="middle" fill="#1e211f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="38" font-weight="700">Reach Codex on your Mac, nearby or away</text>
+  <text x="800" y="108" text-anchor="middle" fill="#656963" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21">Choose local Wi-Fi or a private Tailscale network. Your code stays on the Mac.</text>
+
+  <g transform="translate(88 220)">
+    <rect x="0" y="0" width="206" height="348" rx="34" fill="#1e211f"/>
+    <rect x="12" y="14" width="182" height="320" rx="24" fill="#ffffff"/>
+    <rect x="71" y="25" width="64" height="8" rx="4" fill="#1e211f"/>
+    <circle cx="103" cy="98" r="34" fill="#e3f0ec"/>
+    <text x="103" y="106" text-anchor="middle" fill="#218765" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="700">iOS</text>
+    <text x="103" y="169" text-anchor="middle" fill="#1e211f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" font-weight="700">Codex Remote</text>
+    <rect x="34" y="197" width="138" height="44" rx="8" fill="#f6f6f2" stroke="#d8ddd9" stroke-width="2"/>
+    <text x="103" y="225" text-anchor="middle" fill="#343936" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17">Projects</text>
+    <rect x="34" y="253" width="138" height="44" rx="8" fill="#f6f6f2" stroke="#d8ddd9" stroke-width="2"/>
+    <text x="103" y="281" text-anchor="middle" fill="#343936" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17">Tasks + results</text>
+  </g>
+  <text x="191" y="614" text-anchor="middle" fill="#1e211f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700">Your iPhone</text>
+
+  <g transform="translate(356 164)">
+    <rect x="0" y="0" width="570" height="222" rx="14" fill="#ffffff" stroke="#9bc4b7" stroke-width="3"/>
+    <rect x="22" y="-20" width="168" height="40" rx="8" fill="#218765"/>
+    <text x="106" y="7" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="700">LOCAL MODE</text>
+    <circle cx="102" cy="110" r="55" fill="#eaf3f0"/>
+    <text x="102" y="118" text-anchor="middle" fill="#218765" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="19" font-weight="700">WI-FI</text>
+    <text x="188" y="95" fill="#1e211f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="25" font-weight="700">Same trusted Wi-Fi</text>
+    <text x="188" y="130" fill="#656963" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">No extra account or network service</text>
+    <text x="188" y="162" fill="#656963" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Best when phone and Mac are nearby</text>
+  </g>
+
+  <g transform="translate(356 454)">
+    <rect x="0" y="0" width="570" height="222" rx="14" fill="#ffffff" stroke="#9eb9d8" stroke-width="3"/>
+    <rect x="22" y="-20" width="230" height="40" rx="8" fill="#426c9c"/>
+    <text x="137" y="7" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="700">PRIVATE REMOTE MODE</text>
+    <circle cx="102" cy="110" r="55" fill="#edf2f8"/>
+    <text x="102" y="118" text-anchor="middle" fill="#426c9c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="19" font-weight="700">VPN</text>
+    <text x="188" y="89" fill="#1e211f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="25" font-weight="700">Tailscale Personal</text>
+    <text x="188" y="124" fill="#656963" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Encrypted WireGuard connection from anywhere</text>
+    <text x="188" y="156" fill="#656963" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Free for personal use; no fixed public IP</text>
+    <text x="188" y="188" fill="#426c9c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="700">Gateway is not exposed to the public internet</text>
+  </g>
+
+  <line x1="306" y1="276" x2="346" y2="276" stroke="#218765" stroke-width="5" marker-end="url(#arrow-green)"/>
+  <line x1="306" y1="566" x2="346" y2="566" stroke="#426c9c" stroke-width="5" marker-end="url(#arrow-blue)"/>
+  <line x1="936" y1="276" x2="990" y2="276" stroke="#218765" stroke-width="5" marker-end="url(#arrow-green)"/>
+  <line x1="936" y1="566" x2="990" y2="566" stroke="#426c9c" stroke-width="5" marker-end="url(#arrow-blue)"/>
+
+  <g transform="translate(1010 181)">
+    <rect x="0" y="0" width="500" height="430" rx="14" fill="#242825"/>
+    <rect x="15" y="15" width="470" height="382" rx="7" fill="#f7f8f6"/>
+    <circle cx="38" cy="38" r="6" fill="#df765f"/>
+    <circle cx="58" cy="38" r="6" fill="#e0ad4f"/>
+    <circle cx="78" cy="38" r="6" fill="#5ca47f"/>
+    <rect x="44" y="72" width="412" height="68" rx="8" fill="#e4f0ec"/>
+    <circle cx="80" cy="106" r="18" fill="#218765"/>
+    <text x="80" y="113" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="700">C</text>
+    <text x="112" y="102" fill="#1e211f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" font-weight="700">Codex Remote Gateway</text>
+    <text x="112" y="126" fill="#656963" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15">One authenticated entrypoint</text>
+    <rect x="44" y="160" width="190" height="118" rx="8" fill="#ffffff" stroke="#d8ddd9" stroke-width="2"/>
+    <text x="139" y="204" text-anchor="middle" fill="#426c9c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="19" font-weight="700">Codex</text>
+    <text x="139" y="236" text-anchor="middle" fill="#656963" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15">Runs locally</text>
+    <rect x="266" y="160" width="190" height="118" rx="8" fill="#ffffff" stroke="#d8ddd9" stroke-width="2"/>
+    <text x="361" y="204" text-anchor="middle" fill="#b76545" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="19" font-weight="700">Your projects</text>
+    <text x="361" y="236" text-anchor="middle" fill="#656963" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15">Never leave this Mac</text>
+    <rect x="44" y="301" width="412" height="58" rx="8" fill="#eef1ee"/>
+    <text x="250" y="327" text-anchor="middle" fill="#343936" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="700">PostgreSQL + Valkey + Mac Agent</text>
+    <text x="250" y="350" text-anchor="middle" fill="#656963" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14">Loopback-only internal services</text>
+    <path d="M175 430h150l28 31H147Z" fill="#cbd0cc"/>
+    <rect x="126" y="461" width="248" height="14" rx="7" fill="#aeb5b0"/>
+  </g>
+  <text x="1260" y="702" text-anchor="middle" fill="#1e211f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="25" font-weight="700">Your Mac at home or the office</text>
+
+  <g transform="translate(260 768)">
+    <circle cx="0" cy="0" r="6" fill="#218765"/>
+    <text x="18" y="7" fill="#4f5551" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">One Runtime</text>
+    <circle cx="250" cy="0" r="6" fill="#426c9c"/>
+    <text x="268" y="7" fill="#4f5551" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Two trusted paths</text>
+    <circle cx="548" cy="0" r="6" fill="#b76545"/>
+    <text x="566" y="7" fill="#4f5551" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">No screen streaming</text>
+    <circle cx="870" cy="0" r="6" fill="#218765"/>
+    <text x="888" y="7" fill="#4f5551" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Code stays local</text>
+  </g>
+</svg>
